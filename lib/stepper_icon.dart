@@ -10,12 +10,14 @@ class StepperIcon extends StatelessWidget {
     required this.currentStep,
     required this.stepBarStyle,
     required this.stepData,
+    this.showLabel = true
   }) : super(key: key);
 
   final int currentStep;
   final int step;
   final StepperStyle stepBarStyle;
   final StepperData stepData;
+  final bool showLabel;
 
   bool _isCurrentStep(int step) => currentStep >= step;
 

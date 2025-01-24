@@ -48,6 +48,7 @@ class HorizontalStepperItem extends StatelessWidget {
               currentStep: currentStep,
               stepBarStyle: stepBarStyle,
               stepData: stepData,
+              showLabel: showLabel,
             ),
           ),
           if(showLabel)
