@@ -13,6 +13,7 @@ class HorizontalStepperItem extends StatelessWidget {
     required this.totalSteps,
     required this.stepData,
     required this.stepBarStyle,
+    this.showLabel = true,
     Map<String, Object>? trackingParam,
     String? identity,
     TargetPlatform? platformOverride,
@@ -23,6 +24,7 @@ class HorizontalStepperItem extends StatelessWidget {
   final int totalSteps;
   final StepperData stepData;
   final StepperStyle stepBarStyle;
+  final bool showLabel;
 
   bool _isCurrentStep(int step) => currentStep >= step;
 
@@ -48,7 +50,8 @@ class HorizontalStepperItem extends StatelessWidget {
               stepData: stepData,
             ),
           ),
-          _buildStepDescriptionWidget(step, stepData.label),
+          if(showLabel)
+           _buildStepDescriptionWidget(step, stepData.label),
         ],
       ),
     );

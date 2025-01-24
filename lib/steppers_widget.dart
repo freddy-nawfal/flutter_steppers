@@ -13,6 +13,7 @@ class Steppers extends StatelessWidget {
     required this.labels,
     required this.currentStep,
     this.stepBarStyle,
+    this.showLabels = true,
     this.direction = StepperDirection.horizontal,
   }) : super(key: key);
 
@@ -20,6 +21,7 @@ class Steppers extends StatelessWidget {
   final int currentStep;
   StepperStyle? stepBarStyle;
   final StepperDirection direction;
+  bool showLabels = true;
 
   get _totalSteps => labels.length;
 
@@ -33,6 +35,7 @@ class Steppers extends StatelessWidget {
             labels: labels,
             currentStep: currentStep,
             stepBarStyle: _stepBarStyle,
+            showLabels: showLabels,
           )
         : VerticalSteppers(
             labels: labels,
